@@ -6,6 +6,14 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
+  int _imageCount = 0;
+
+  void _addImage() {
+    setState(() {
+      ++_imageCount;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,11 +22,11 @@ class AppState extends State<App> {
           title: Text('Let\'s See Images!'),
         ),
         body: Center(
-          child: Text('Hello'),
+          child: Text('Image - $_imageCount'),
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
-          onPressed: () => {},
+          onPressed: _addImage,
         ),
       ),
     );
