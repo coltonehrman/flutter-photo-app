@@ -13,7 +13,13 @@ class AppState extends State<App> {
         appBar: AppBar(
           title: Text('Let\'s See Images!'),
         ),
-        body: Text('Hello'),
+        body: Center(
+          child: Text('Hello'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () => {},
+        ),
       ),
     );
   }
